@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .fact-display {
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .show-fact-btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .show-fact-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Solar System Facts</h1>
+        <div id="fact-display" class="fact-display">
+            Press the button to see a fact!
+        </div>
+        <button id="show-fact-btn" class="show-fact-btn">Show Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "The solar system consists of the Sun and the objects that orbit it, including eight planets, their moons, and other celestial bodies.",
+            "The Sun contains 99.86% of the mass in the solar system.",
+            "Mercury is the closest planet to the Sun and has no atmosphere to retain heat, making it extremely hot during the day and freezing at night.",
+            "Venus is the hottest planet in the solar system due to its thick, toxic atmosphere that traps heat in a runaway greenhouse effect.",
+            "Earth is the only planet in the solar system known to support life, with a diverse range of ecosystems.",
+            "Mars is home to the tallest volcano and the deepest, longest canyon in the solar system.",
+            "Jupiter is the largest planet in the solar system and has a Great Red Spot, which is a giant storm that has been raging for hundreds of years.",
+            "Saturn is known for its stunning rings, which are made mostly of ice particles, with some rock debris and dust.",
+            "Uranus rotates on its side, making its axis nearly parallel to the plane of the solar system.",
+            "Neptune is the farthest planet from the Sun and has the strongest winds in the solar system, with speeds reaching up to 1,200 miles per hour."
+        ];
+
+        document.getElementById('show-fact-btn').addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact-display').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
